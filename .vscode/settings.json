@@ -1,0 +1,15 @@
+{
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "[scss]": {
+      "editor.formatOnSave": true
+    },
+    "[json]": {
+      "editor.formatOnSave": true
+    },
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "scss.lint.validProperties": ["composes"]
+  }
+  
