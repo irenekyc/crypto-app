@@ -1,0 +1,24 @@
+@import '../../variables.scss';
+
+.nav{
+    height: 100%;
+    width:250px;
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    background:$dark;
+    padding: 2rem 1rem;
+}
+
+.navItem{
+    color: $white;
+    display:block;
+    text-transform: uppercase;
+    text-decoration: none;;
+    margin-bottom: 1rem;
+
+    &:last-child{
+        margin-bottom:0;
+    }
+}
