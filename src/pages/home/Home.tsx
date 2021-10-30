@@ -5,6 +5,8 @@ import convertNumbers from "../../helpers/convertNumbers";
 import { Col, Row, Statistic } from "../../layouts";
 import { useFetchStatsQuery } from "../../services/coinRankingApi";
 import { StatsResponse } from "../../typings/API";
+import CryptocurrenciesGrid from "../../widgets/cryptocurrencies/crypto-currencies-grid";
+import NewsGrid from "../../widgets/news/news-grid";
 
 const Home: FunctionComponent = () => {
   const { data = {}, isFetching } = useFetchStatsQuery();
@@ -25,6 +27,9 @@ const Home: FunctionComponent = () => {
           Loader
         ) : (
           <>
+            <Col span={{ xs: 12 }}>
+              <h2>Latest Statistic</h2>
+            </Col>
             <Col span={{ xs: 6, md: 4 }}>
               <Statistic label="Total coins" value={totalCoins} />
             </Col>
@@ -51,6 +56,22 @@ const Home: FunctionComponent = () => {
             </Col>
           </>
         )}
+      </Row>
+      <Row>
+        <Col span={{ xs: 12 }}>
+          <h2>Top 10 Cryptocurrencies in the world</h2>
+        </Col>
+        <Col span={{ xs: 12 }}>
+          <CryptocurrenciesGrid display={10} />
+        </Col>
+      </Row>
+      <Row>
+        <Col span={{ xs: 12 }}>
+          <h2>Latest Cryptocurrencies News</h2>
+        </Col>
+        <Col span={{ xs: 12 }}>
+          <NewsGrid display={6} />
+        </Col>
       </Row>
     </>
   );
