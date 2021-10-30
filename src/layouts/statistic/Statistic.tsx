@@ -24,7 +24,7 @@ const Statistic: FunctionComponent<StatisticProps> = ({
         {label}
       </span>
       <span className={classNames(styles.statisticValue, valueClassName)}>
-        {value}
+        {value.toLocaleString()}
       </span>
     </div>
   );
