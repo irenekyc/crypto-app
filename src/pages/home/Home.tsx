@@ -1,12 +1,14 @@
 import { FunctionComponent } from "react";
 
 import Loader from "../../components/loader";
+import { NEWS_PREVIEW_POST } from "../../constants/news";
 import convertNumbers from "../../helpers/convertNumbers";
 import { Col, Row, Statistic } from "../../layouts";
 import { useFetchStatsQuery } from "../../services/coinRankingApi";
+import { useFetchNewsQuery } from "../../services/coinsNewsApi";
 import { StatsResponse } from "../../typings/API";
 import CryptocurrenciesGrid from "../../widgets/cryptocurrencies/crypto-currencies-grid";
-import NewsGrid from "../../widgets/news/news-grid";
+import NewsPreviewGrid from "../../widgets/news/news-preview-grid";
 
 const Home: FunctionComponent = () => {
   const { data = {}, isFetching } = useFetchStatsQuery();
@@ -20,6 +22,10 @@ const Home: FunctionComponent = () => {
     } = {},
   } = data as StatsResponse;
 
+  const { data: { value: news = [] } = {}, isFetching: isNewsFetching } =
+    useFetchNewsQuery({
+      count: NEWS_PREVIEW_POST,
+    });
   return (
     <>
       <Row>
@@ -70,7 +76,7 @@ const Home: FunctionComponent = () => {
           <h2>Latest Cryptocurrencies News</h2>
         </Col>
         <Col span={{ xs: 12 }}>
-          <NewsGrid display={6} />
+          {isNewsFetching ? Loader : <NewsPreviewGrid news={news} />}
         </Col>
       </Row>
     </>
