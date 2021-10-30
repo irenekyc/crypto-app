@@ -6,6 +6,14 @@ const navList: NavItemProps[] = [
     vanityName: "home",
   },
   {
+    path: "/cryptocurrencies",
+    vanityName: "crytocurrencies",
+  },
+  {
+    path: "/exchanges",
+    vanityName: "exchanges",
+  },
+  {
     path: "/news",
     vanityName: "news",
   },
