@@ -21,7 +21,13 @@ export const coinsNewsApi = createApi({
         headers: coinsNewsHeaders,
       }),
     }),
+    fetchAllNews: builder.query<NewsResponse, void>({
+      query: () => ({
+        url: `/news/search?q=crypto currencies&safeSearch=Off&textFormat=Raw&freshness=Day&count=100`,
+        headers: coinsNewsHeaders,
+      }),
+    }),
   }),
 });
 
-export const { useFetchNewsQuery } = coinsNewsApi;
+export const { useFetchNewsQuery, useFetchAllNewsQuery } = coinsNewsApi;

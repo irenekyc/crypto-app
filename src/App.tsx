@@ -27,7 +27,7 @@ const App: FunctionComponent = () => {
               exact
               component={Cryptocurrencies}
             />
-            <Route path="/crypto/:id" component={CryptoDetails} />
+            <Route path="/crypto/:slug" component={CryptoDetails} />
           </Main>
         </Switch>
       </Page>

@@ -19,6 +19,12 @@ export type CoinDetails = {
   color: string;
   websiteUrl: string;
   rank: number;
+  price: string;
+  change: number;
+  allTimeHigh: {
+    price: string;
+    timestamp: number;
+  };
 };
 
 export type CoinsResponse = {
