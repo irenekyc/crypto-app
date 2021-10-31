@@ -1,0 +1,63 @@
+const testData = [
+  {
+    id: 286,
+    uuid: "-zdvbieRdZ",
+    name: "Binance",
+    description: "some some",
+    iconUrl: "https://cdn.coinranking.com/mDTK5qrmq/binance.svg",
+    verified: false,
+    lastTickerCreatedAt: 1635659237000,
+    numberOfMarkets: 1266,
+    volume: 42496753552.33526,
+    websiteUrl: "https://www.binance.com/en/register?ref=35424440",
+    rank: 1,
+    marketShare: 28.73338377562817,
+  },
+  {
+    id: 355,
+    uuid: "qn5ZJmPFP",
+    name: "Coinbase Pro",
+    description:
+      "<p>Coinbase Pro aims to offer advanced traders the ability to trade a variety of digital assets on a secure, insurance backed platform.</p> ",
+    iconUrl: "https://cdn.coinranking.com/eTtnk9dDn/coinbase.svg",
+    verified: false,
+    lastTickerCreatedAt: 1635659156000,
+    numberOfMarkets: 286,
+    volume: 8895369593.147217,
+    websiteUrl: "https://coinbase-consumer.sjv.io/LPaJ5j",
+    rank: 3,
+    marketShare: 6.014437503589192,
+  },
+  {
+    id: 287,
+    uuid: "hUlMcwWZp_",
+    name: "OKEx",
+    description:
+      "<p> is a global bitcoin exchange that claims to be secured with bank-level SSL encryption and cold storage. This exchange provides more than four hundred tokens &amp; futures trading pairs enabling users to optimize their strategy. OKEx wants to provide a safe, reliable, and stable environment for digital asset trading. They serve customers from over a hundred countries.</p> <h3>OKEx security</h3> <p></p> ",
+    iconUrl: "https://cdn.coinranking.com/tBA4j321g/Okex.svg",
+    verified: false,
+    lastTickerCreatedAt: 1635659242000,
+    numberOfMarkets: 471,
+    volume: 8294921289.3622055,
+    websiteUrl: "https://www.okex.com/join/7603209",
+    rank: 4,
+    marketShare: 5.608455631848506,
+  },
+  {
+    id: 336,
+    uuid: "xRvYoPjeQ",
+    name: "Huobi Global",
+    description:
+      "<p>&nbsp;</p> <p>Huobi&nbsp;Global is a cryptocurrency exchange headquartered&nbsp;in&nbsp;Beijing and with offices in Chengdu, Hong Kong, Seoul, Shenzhen, Singapore, and Tokyo. The exchange was founded in September 2013 and is one of the largest digital currency exchanges in China. The platform features a distributed system architecture built to protect against DDoS and other potential threats. The app is available for&nbsp;iOS&nbsp;and Android.&nbsp;n early access to special Huobi events.</p> ",
+    iconUrl: "https://cdn.coinranking.com/ryFpQe0c7/ht.svg",
+    verified: false,
+    lastTickerCreatedAt: 1635659050000,
+    numberOfMarkets: 832,
+    volume: 6557291695.095837,
+    websiteUrl: "https://www.huobi.com/en-us/topic/invited/?invite_code=58q3b",
+    rank: 5,
+    marketShare: 4.4335899346263,
+  },
+];
+
+export default testData;

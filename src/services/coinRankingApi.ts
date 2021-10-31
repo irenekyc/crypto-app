@@ -1,6 +1,10 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-import { CoinsResponse, StatsResponse } from "../typings/API";
+import {
+  CoinsResponse,
+  ExchangesResponse,
+  StatsResponse,
+} from "../typings/API";
 
 const coinRankingApiHeaders = {
   "x-rapidapi-host": "coinranking1.p.rapidapi.com",
@@ -26,7 +30,17 @@ export const coinRankingApi = createApi({
         headers: coinRankingApiHeaders,
       }),
     }),
+    fetchExchanges: builder.query<ExchangesResponse, void>({
+      query: () => ({
+        url: "/exchanges",
+        headers: coinRankingApiHeaders,
+      }),
+    }),
   }),
 });
 
-export const { useFetchStatsQuery, useFetchCoinsQuery } = coinRankingApi;
+export const {
+  useFetchStatsQuery,
+  useFetchCoinsQuery,
+  useFetchExchangesQuery,
+} = coinRankingApi;

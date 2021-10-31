@@ -9,7 +9,11 @@ const convertNumbers = (
   number: number,
   options?: ConvertNumbersOptions
 ): string => {
-  const { long = false, lowerCase = false } = options as ConvertNumbersOptions;
+  const opt: ConvertNumbersOptions = {
+    long: options?.long || false,
+    lowerCase: options?.lowerCase || false,
+  };
+  const { long, lowerCase } = opt;
   let denom = DENOM_BASE;
   let unitIndex = 0;
 

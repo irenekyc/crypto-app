@@ -33,6 +33,25 @@ export type CoinsResponse = {
   };
 };
 
+export type ExchangeDetails = {
+  id: string;
+  uuid: string;
+  name: string;
+  description: string;
+  iconUrl: string;
+  websiteUrl: string;
+  numberOfMarkets: number;
+  rank: number;
+  marketShare: number;
+  volume: number;
+};
+
+export type ExchangesResponse = {
+  data: {
+    exchanges: ExchangeDetails[];
+  };
+};
+
 export type NewsRequestParams = {
   count: number;
 };
