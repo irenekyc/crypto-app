@@ -15,6 +15,22 @@ $cta-teal-hover: #014546;
     margin-bottom:0.5rem;
 }
 
+@mixin moblie{
+    @content
+};
+
+@mixin md{
+    @media only screen and (min-width: 767px) {
+       @content
+      };
+};
+
+@mixin lg{
+    @media only screen and (min-width: 1220px) {
+        @content
+       };
+}
+
 
 @keyframes fadeIn{
     0%{

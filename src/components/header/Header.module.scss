@@ -1,0 +1,29 @@
+@import '../../variables.scss';
+
+.header{
+    width:100%;
+    padding: 1rem 0;
+    background:$dark;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    span{
+        font-size: 1.5rem;
+        margin-left:0.75rem;
+    }
+    position:fixed;
+    top: 0;
+    left:0;
+    right:0;
+
+    @include lg{
+        flex-direction: column;
+        position:unset;
+        span{
+            margin-left:0;
+        }
+        
+    }
+}
+

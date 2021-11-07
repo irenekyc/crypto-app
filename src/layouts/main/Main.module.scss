@@ -1,4 +1,11 @@
+@import '../../variables.scss';
+
 .main{
-    margin-left: 250px;
+    margin-top: 72px;
     padding: 2rem 1rem;
+
+    @include lg{
+        margin-top:0;
+        margin-left: 250px;
+    }
 }

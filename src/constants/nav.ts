@@ -1,21 +1,26 @@
 import { NavItemProps } from "../typings/Nav";
 
+export const HOME = "HOME";
+export const CRYPTOCURRENCIES = "CRYPTOCURRENCIES";
+export const EXCHANGES = "EXCHANGES";
+export const NEWS = "NEWS";
+
 const navList: NavItemProps[] = [
   {
     path: "/",
-    vanityName: "home",
+    vanityName: HOME,
   },
   {
     path: "/cryptocurrencies",
-    vanityName: "crytocurrencies",
+    vanityName: CRYPTOCURRENCIES,
   },
   {
     path: "/exchanges",
-    vanityName: "exchanges",
+    vanityName: EXCHANGES,
   },
   {
     path: "/news",
-    vanityName: "news",
+    vanityName: NEWS,
   },
 ];
 
