@@ -1,0 +1,38 @@
+@import '../../variables.scss';
+
+.statisticTable{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    max-width: 400px;
+}
+
+.statisticTitle{
+    @include subTitle;
+}
+
+.statisticRow{
+    width:100%;
+    padding: 1rem 0.25rem;
+    border-bottom: 1px solid $gray-1;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:1rem;
+
+    &:hover{
+        background: #f0f0f0f0;
+    }
+}
+
+.statisticLabel{
+    color: $gray-3;
+    font-weight: 300;
+    text-transform: capitalize;
+
+}
+
+.statisticValue{
+    color: $dark;
+    font-weight: 600;
+}

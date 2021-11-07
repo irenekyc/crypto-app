@@ -1,0 +1,43 @@
+@import '../../variables.scss';
+
+.descriptionRow{
+    align-items: flex-start;
+    margin: 2rem 0;
+}
+
+.description{
+    padding-top: 1rem;
+    padding-right:2rem;
+    h3{
+        margin: 0.5rem 0;
+        margin-top:1rem;
+        font-weight: 500;
+    }
+}
+
+.otherLinksDiv{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+
+    a{
+        display:inline-flex;
+        position:relative;
+        padding-right: 1.5rem;
+        text-transform: capitalize;;
+        margin-bottom: 0.5rem;
+        &:after{
+            position:absolute;
+            right: 0.75rem;
+            height:100%;
+            width:1px;
+            background:$dark;
+            content : "";
+        }
+        &:last-child{
+            &:after{
+                display:none;
+            }
+        }
+    }
+}

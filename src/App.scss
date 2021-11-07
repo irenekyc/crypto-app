@@ -1,5 +1,23 @@
+@import './variables.scss';
+
 *{
     padding:0;
     margin:0;
     box-sizing:border-box;
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+    @include subTitle;
+}
+
+a{
+    color: $cta-teal;
+    text-decoration: none;
+    &:hover{
+        color: $cta-teal-hover;
+    }
 }

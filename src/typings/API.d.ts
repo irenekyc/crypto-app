@@ -8,6 +8,12 @@ export type StatsResponse = {
   };
 };
 
+export type ExternalLinkType = {
+  name: string;
+  url: string;
+  type: string;
+};
+
 export type CoinDetails = {
   id: string;
   uuid: string;
@@ -19,8 +25,21 @@ export type CoinDetails = {
   color: string;
   websiteUrl: string;
   rank: number;
+  socials: ExternalLinkType[];
+  links: ExternalLinkType[];
+  confirmedSupply: boolean;
+  numberOfMarkets: number;
+  numberOfExchanges: number;
+  volume: number;
+  marketCap: number;
   price: string;
+  circulatingSupply: number;
+  totalSupply: number;
+  approvedSupply: boolean;
+  firstSeen: number;
+  listedAt: number;
   change: number;
+  history: string[];
   allTimeHigh: {
     price: string;
     timestamp: number;
@@ -30,6 +49,12 @@ export type CoinDetails = {
 export type CoinsResponse = {
   data: {
     coins: CoinDetails[];
+  };
+};
+
+export type CoinDetailsResponse = {
+  data: {
+    coin: CoinDetails;
   };
 };
 

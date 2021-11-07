@@ -6,6 +6,15 @@ $gray-4: #e9e9e9;
 $gray-3: #5a6165;
 $dark-gray-1: #111111;
 
+$cta-teal: #013637;
+$cta-teal-hover: #014546;
+
+@mixin subTitle {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom:0.5rem;
+}
+
 
 @keyframes fadeIn{
     0%{

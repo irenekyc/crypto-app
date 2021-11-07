@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 import {
+  CoinDetailsResponse,
   CoinsResponse,
   ExchangesResponse,
   StatsResponse,
@@ -36,6 +37,12 @@ export const coinRankingApi = createApi({
         headers: coinRankingApiHeaders,
       }),
     }),
+    fetchCoinDetails: builder.query<CoinDetailsResponse, string>({
+      query: (id) => ({
+        url: `/coin/${id}`,
+        headers: coinRankingApiHeaders,
+      }),
+    }),
   }),
 });
 
@@ -43,4 +50,5 @@ export const {
   useFetchStatsQuery,
   useFetchCoinsQuery,
   useFetchExchangesQuery,
+  useFetchCoinDetailsQuery,
 } = coinRankingApi;

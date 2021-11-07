@@ -47,7 +47,7 @@ const ExchangesHeader: FunctionComponent<ExchangesHeaderProps> = ({
       <div className={styles.exchangesHeaderLink}>
         {url && (
           <a href={url} target="_blank" rel="noreferrer">
-            <ExternalLinkIcon />
+            {ExternalLinkIcon}
           </a>
         )}
       </div>
