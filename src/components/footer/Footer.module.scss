@@ -1,0 +1,26 @@
+@import '../../variables.scss';
+
+.footer{
+    width:100%;
+    background:$dark;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+    line-height: 20px;
+    position:fixed;
+    bottom: 0;
+    left:0;
+    right:0;
+    font-size:0.75rem;
+    z-index:1000;
+
+    @include lg{
+        position:absolute;
+        align-items:flex-end;
+        padding: 0 1rem;
+    }
+}

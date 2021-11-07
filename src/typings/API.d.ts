@@ -1,3 +1,5 @@
+import { TimePeriodType } from "./TimePeriod";
+
 export type StatsResponse = {
   data: {
     totalCoins: number;
@@ -12,6 +14,11 @@ export type ExternalLinkType = {
   name: string;
   url: string;
   type: string;
+};
+
+export type PriceHistory = {
+  price: string;
+  timestamp: number;
 };
 
 export type CoinDetails = {
@@ -39,7 +46,7 @@ export type CoinDetails = {
   firstSeen: number;
   listedAt: number;
   change: number;
-  history: string[];
+  history: PriceHistory[];
   allTimeHigh: {
     price: string;
     timestamp: number;
@@ -55,6 +62,17 @@ export type CoinsResponse = {
 export type CoinDetailsResponse = {
   data: {
     coin: CoinDetails;
+  };
+};
+
+export type CoinHistoryParams = {
+  id: string;
+  timePeriod: TimePeriodType;
+};
+
+export type CoinPriceHistory = {
+  data: {
+    history: PriceHistory[];
   };
 };
 

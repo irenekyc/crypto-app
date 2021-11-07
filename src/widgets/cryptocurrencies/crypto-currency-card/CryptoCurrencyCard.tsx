@@ -14,7 +14,7 @@ const CryptoCurrencyCard: FunctionComponent<CryptoCurrencyCardProps> = ({
 }: CryptoCurrencyCardProps) => {
   return (
     <Link
-      to={`/crypto/${details.slug}&${details.id}`}
+      to={`/cryptocurrencies/${details.slug}&${details.id}`}
       className={styles.cryptoCurrencyCard}
     >
       <div className={styles.cryptoCurrencyCardHeader}>

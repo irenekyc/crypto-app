@@ -5,7 +5,7 @@ import { NewsRequestParams, NewsResponse } from "../typings/API";
 const coinsNewsHeaders = {
   "x-bingapis-sdk": "true",
   "x-rapidapi-host": "bing-news-search1.p.rapidapi.com",
-  "x-rapidapi-key": "9db871c73cmsh1402cc0508a38a8p1316a6jsnf50853e3214f",
+  "x-rapidapi-key": process.env.REACT_APP_COIN_RANKING_API_KEY,
 };
 
 const baseUrl = "https://bing-news-search1.p.rapidapi.com";

@@ -2,6 +2,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 import {
   CoinDetailsResponse,
+  CoinHistoryParams,
+  CoinPriceHistory,
   CoinsResponse,
   ExchangesResponse,
   StatsResponse,
@@ -9,7 +11,7 @@ import {
 
 const coinRankingApiHeaders = {
   "x-rapidapi-host": "coinranking1.p.rapidapi.com",
-  "x-rapidapi-key": "9db871c73cmsh1402cc0508a38a8p1316a6jsnf50853e3214f",
+  "x-rapidapi-key": process.env.REACT_APP_COIN_RANKING_API_KEY,
 };
 
 const baseUrl = "https://coinranking1.p.rapidapi.com";
@@ -43,6 +45,12 @@ export const coinRankingApi = createApi({
         headers: coinRankingApiHeaders,
       }),
     }),
+    fetchCoinPriceHistory: builder.query<CoinPriceHistory, CoinHistoryParams>({
+      query: (params: CoinHistoryParams) => ({
+        url: `/coin/${params.id}/history/${params.timePeriod}`,
+        headers: coinRankingApiHeaders,
+      }),
+    }),
   }),
 });
 
@@ -51,4 +59,5 @@ export const {
   useFetchCoinsQuery,
   useFetchExchangesQuery,
   useFetchCoinDetailsQuery,
+  useFetchCoinPriceHistoryQuery,
 } = coinRankingApi;

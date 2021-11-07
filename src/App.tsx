@@ -3,6 +3,7 @@ import "./App.scss";
 import { FunctionComponent } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import Footer from "./components/footer";
 import Header from "./components/header";
 import Nav from "./components/nav";
 import { useAppMediaQuery } from "./hooks";
@@ -31,9 +32,11 @@ const App: FunctionComponent = () => {
               exact
               component={Cryptocurrencies}
             />
-            <Route path="/crypto/:slug" component={CryptoDetails} />
+            <Route path="/cryptocurrencies/:slug" component={CryptoDetails} />
+            {isLG && <Footer />}
           </Main>
         </Switch>
+        {!isLG && <Footer />}
       </Page>
     </Router>
   );

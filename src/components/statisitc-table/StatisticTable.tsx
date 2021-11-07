@@ -3,6 +3,8 @@ import { FunctionComponent, ReactNode } from "react";
 import styles from "./StatisticTable.module.scss";
 
 type Statistic = {
+  withIcon?: boolean;
+  icon?: ReactNode;
   label: string;
   value: string | number | ReactNode;
 };
@@ -22,7 +24,15 @@ const StatisticTable: FunctionComponent<StatisticTableProps> = ({
       {data.map((statistic: Statistic) => (
         <tr key={`${statistic.label}:${statistic.value}`}>
           <td className={styles.statisticRow}>
-            <span className={styles.statisticLabel}> {statistic.label}</span>
+            <span className={styles.statisticLabel}>
+              {" "}
+              {statistic.withIcon && statistic.icon && (
+                <span className={styles.statisticLabelIcon}>
+                  {statistic.icon}
+                </span>
+              )}
+              {statistic.label}
+            </span>
             {typeof statistic.value === "string" ||
             typeof statistic.value === "number" ? (
               <span className={styles.statisticValue}>{statistic.value}</span>

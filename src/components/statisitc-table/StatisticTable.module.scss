@@ -25,6 +25,14 @@
     }
 }
 
+.statisticLabelIcon{
+    svg{
+        height: 16px;
+        width:16px;
+    }
+    margin-right:0.5rem;
+}
+
 .statisticLabel{
     color: $gray-3;
     font-weight: 300;

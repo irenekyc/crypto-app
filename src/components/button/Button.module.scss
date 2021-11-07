@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+
+.button{
+    cursor: pointer;
+    outline:none;
+    background:none;
+    border:none;
+    border-radius: 4px;;
+    padding: 6px 12px;
+    background:$gray-4;
+    color: $dark;
+    text-align: center;
+}
+
+.activeStyle{
+    background: $cta-teal;
+    color: white;
+    pointer-events: none;
+}
